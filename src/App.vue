@@ -22,7 +22,7 @@ export default {
     LoudJoke,
     SnakeJoke,
     NormalJoke
-  }
+  },
 }
 </script>
 

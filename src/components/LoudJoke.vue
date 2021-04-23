@@ -1,23 +1,19 @@
 <template>
     <div>
-        <button @click="getloudJoke">Get Loud Joke</button>
+        <!-- When the button is clicked, call the loudJoke function -->
+        <button @click="loudJoke">Get Loud Joke</button>
     </div>
 </template>
 
 <script>
     export default {
         name: "loud-joke",
-
         methods: {
-            getLoudJoke: function() {
-                this.loudJoke();
-            }
-        },
-        
-        computed: {
+            // Creating a function that updates the value of the joke in the store to change the joke to all capital letters
+            // This function is passing the payload which is joke in all capital letters and committing this change to the store
             loudJoke: function() {
-                return this.$store.getters.makeJokeAllCaps;
-            }
+                this.$store.commit("updateRandomJoke", this.$store.state.randomJoke.toUpperCase());
+            },
         },
     }
 </script>

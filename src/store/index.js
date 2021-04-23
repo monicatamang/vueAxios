@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    randomJoke: ""
+    randomJoke: "",
   },
   
   mutations: {
@@ -30,8 +30,6 @@ export default new Vuex.Store({
   },
 
   getters: {
-    makeJokeAllCaps: function(state) {
-      return state.joke.toUpperCase();
-    },
+    
   }
 })
