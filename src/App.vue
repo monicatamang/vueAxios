@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section id="app">
+    <joke-button></joke-button>
+    <article>
+      <loud-joke></loud-joke>
+      <snake-joke></snake-joke>
+      <normal-joke></normal-joke>
+    </article>
+  </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import JokeButton from "./components/JokeButton.vue";
+import LoudJoke from "./components/LoudJoke.vue";
+import SnakeJoke from "./components/SnakeJoke.vue";
+import NormalJoke from "./components/NormalJoke.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    JokeButton,
+    LoudJoke,
+    SnakeJoke,
+    NormalJoke
   }
 }
 </script>
@@ -24,5 +34,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+article {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10vh;
+}
+
+button {
+  cursor: pointer;
 }
 </style>
