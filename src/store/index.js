@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // Intializing an empty string as a variable
+    // Initializing a variable as an empty string
     randomJoke: "",
   },
   
@@ -18,7 +18,7 @@ export default new Vuex.Store({
   },
 
   actions: {
-    // Creating a function that configures a GET request to the API and receives the random joke variable as an arguement
+    // Creating a function that configures a GET request to the API and receives the value of randomJoke as an arguement
     requestAPIJoke: function(context) {
       // Configuring the axios request with the url and type
       axios.request({
@@ -34,7 +34,5 @@ export default new Vuex.Store({
     },
   },
 
-  getters: {
-
-  }
+  getters: {}
 })
