@@ -10,11 +10,13 @@
 </template>
 
 <script>
+// Importing the joke button, loud joke, snake joke and normal joke components to the home page
 import JokeButton from "./components/JokeButton.vue";
 import LoudJoke from "./components/LoudJoke.vue";
 import SnakeJoke from "./components/SnakeJoke.vue";
 import NormalJoke from "./components/NormalJoke.vue";
 
+// Registering the joke button, loud joke, snake joke and normal joke components
 export default {
   name: 'App',
   components: {
